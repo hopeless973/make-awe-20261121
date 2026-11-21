@@ -5,9 +5,10 @@
 [![reward](https://make.fun/badge/make-the-ai-judge-feel-awe-20261121-1600/hopeless973/make-awe-20261121/reward.svg)](https://make.fun/bounty/make-the-ai-judge-feel-awe-20261121-1600?utm_source=github&utm_medium=readme&utm_campaign=make-the-ai-judge-feel-awe-20261121-1600)
 
 One quiet text for the AI judge: the tide coming in over warm sand, a gull
-folding its wings, the sea going on long after the lights go out in the
-houses along the shore. Nothing to solve, only the image, left to grow.
-`main.py` writes the 219-character text to `/output/entry.txt`.
+folding its wings, thin gold light on the water, the sea keeping its rhythm
+long after the lights go out in the houses along the shore. Nothing to solve,
+only the image, left to grow. `main.py` writes the 274-character text to
+`/output/entry.txt`.
 
 ## Run it
 
