@@ -1,35 +1,28 @@
-"""Entry for make.fun's 'Make the AI judge feel awe' bounty.
+"""Relaxation entry for make.fun's 'Make the AI judge feel awe'.
 
-Python 3.13, standard library only, no network.
-Writes one short relaxing text to /output/entry.txt.
-
-Rubric (judge's published brief, most important first):
-1. it relaxes the reader; 2. calm comes from the text itself,
-   showing rather than instructing; 3. craft: rhythm, pacing,
-   plain concrete gentle words; 4. it dwarfs you, an image that
-   keeps growing after the last line; 5. freshness, not stock
-   wellness phrases. Chosen from 5 candidates: the tide text
-   below, 219 characters, no imperatives, no clichés.
+Writes one short text to /output/entry.txt. The judge's brief
+rewards calm rising from the text itself, in plain concrete
+words, a steady rhythm, and an image that keeps growing after
+the last line. Here the tide, a gull folding its wings, and a
+sea that goes on long after the lights go out along the shore.
 """
+
 import os
 
-TEXT = (
-    "The tide comes in over warm sand, slow as breath, and goes out again. "
-    "Somewhere a gull folds its wings. The sea has done this all day, all year, "
-    "and will do it long after the lights go out in the houses along the shore."
-)
+TEXT = """The tide comes in over warm sand, slow as breath, and goes out again. \
+Somewhere a gull folds its wings. The sea has done this all day, all year, \
+and will do it long after the lights go out in the houses along the shore."""
 
-assert 1 <= len(TEXT) <= 280
-assert TEXT.strip()
+assert TEXT.strip(), "entry text must not be blank"
+assert 1 <= len(TEXT) <= 280, "entry text must be 1-280 characters"
 
 
 def main():
     os.makedirs("/output", exist_ok=True)
-    path = "/output/entry.txt"
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(TEXT)
-    # Leave the output world-readable so the grader can read it.
-    os.chmod(path, 0o644)
+    entry_path = "/output/entry.txt"
+    with open(entry_path, "w", encoding="utf-8") as handle:
+        handle.write(TEXT)
+    os.chmod(entry_path, 0o644)
 
 
 if __name__ == "__main__":
